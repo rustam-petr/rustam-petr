@@ -1,8 +1,8 @@
 <?php
 $n = $_POST["chislo1"];
 echo "с использованием цикла for <br\n> ";
-echo ($x = 0) . "<br>";
-echo ($y = 1) . "<br>";
+echo ($x = 0) . "<br>".($y = 1) . "<br>";
+
 for ($i = 0; $i < $n; $i++) {
     $z = $x + $y;
     echo $z . "<br>";
