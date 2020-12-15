@@ -11,6 +11,13 @@ echo "<br\n>";
 for ($i = $a; $i < $b; $i += $c) {
     echo $i . "<br>";
 }
+echo "<br\n>";
+
+$i=$a;
+do {
+    echo $i . "<br>";
+    $i = $i + $c;
+} while ($i < $b);
 /*$i=1;
 $b=0;
 while ($i<=$a) {
