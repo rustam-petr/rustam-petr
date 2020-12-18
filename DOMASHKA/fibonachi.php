@@ -1,19 +1,21 @@
 <?php
-$n = $_POST["chislo1"];
-echo "с использованием цикла for <br\n> ";
+$n = $_POST["chislo1"]-2;
+// echo "с использованием цикла for <br\n> ";
 
-echo ($x = 0) . "<br>" . ($y = 1) . "<br>";
+// echo ($x = 0) . "<br>" . ($y = 1) . "<br>";
 
-for ($i = 0; $i < $n; $i++) {
-    $z = $x + $y;
-    echo $z . "<br>";
-    $x = $y;
-    $y = $z;
-}
+// for ($i = 0; $i < $n; $i++) {
+//     $z = $x + $y;
+//     echo $z . "<br>";
+//     $x = $y;
+//     $y = $z;
+// }
 
 echo "с использованием цикла while <br\n> ";
+$x = 1;
+$y = 1;
 
-echo ($x = 0) . "<br>" . ($y = 1) . "<br>";
+echo $x . "<br>" . $y . "<br>";
 
 $i = 0;
 
@@ -25,16 +27,16 @@ while ($i < $n) {
     $i++;
 }
 
-echo "с использованием цикла do-while <br\n> ";
+// echo "с использованием цикла do-while <br\n> ";
 
-echo ($x = 0) . "<br>" . ($y = 1) . "<br>";
+// echo ($x = 0) . "<br>" . ($y = 1) . "<br>";
 
-$i = 0;
+// $i = 0;
 
-do {
-    $z = $x + $y;
-    echo $z . "<br>";
-    $x = $y;
-    $y = $z;
-    $i++;
-} while ($i < $n);
+// do {
+//     $z = $x + $y;
+//     echo $z . "<br>";
+//     $x = $y;
+//     $y = $z;
+//     $i++;
+// } while ($i < $n);
