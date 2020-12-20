@@ -4,7 +4,7 @@ $true_answer = ["35", "56", "70", "45", "125", "16", "81", "42", "27", "91"];
 $b = 0;
 $c = 0;
 
-for ($i = 0; $i < 10; $i++) {
+for ($i = 0; $i < count($answer); $i++) {
     if ($answer[$i] == $true_answer[$i]) {
         $b = $b + 1;
     } else {
