@@ -1,15 +1,14 @@
 <?php
 $a = $_POST["q1"];
-$q = str_split($a);
- print_r($q);
-//  gettype($q);
+
+$arr = str_split($a);
+
 $number = ["ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"];
-echo "<br>";
-foreach ($q as $value) {
+
+foreach ($arr as $value) {
     if (is_numeric($value)) {
-        echo " ".$number[$value];
-       
+        echo " " . $number[$value];
     } else {
-        echo " ".$value;
+        echo " " . $value;
     }
 }
