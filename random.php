@@ -7,11 +7,12 @@ $b = 0;
 $arr = [];
 
 
-while ($a < $i = random_int(12, 20)) {
+while ($a < $i = mt_rand(12, 20)) {
 
-    if ($i <> 15) {
+    if ($i !== 15) {
 
         array_push($arr, $i);
+
         $b = $b + 1;
     } else {
         break;
