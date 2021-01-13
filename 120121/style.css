@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+body {
+    background-image: url(dollar.png);
+
+}
+table {
+    margin: 150px 0px 0px 650px;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid #5E5BA6;
+    height: 300px;
+    width: 500px;
+    border-spacing: 0px;
+    text-align: center;
+    background-color: gray;
+    filter: drop-shadow(14px 15px 20px gray);
+    font-family: fantasy;
+    font-size: 30px;
+    
+
+
+}
+table td {
+    border: 2px solid #FFDF00;
+    font-family: 'Yusei Magic', sans-serif;
+    color: blue;
+    font-size: 25px;
+    text-shadow: 2px 2px 15px black;
+
+}
