@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 $vedomost = [
   ["Номер", "Фамилия", "Сумма"],
@@ -8,13 +17,13 @@ $vedomost = [
   [5, "Зайцев Рустам", 1000],
   [6, "Зайцев Олег", 900],
   [7, "Пушкин", 500],
-  [8, "Лермонтов", 200]
+  
 ];
-for ($i = 0, $rows = count($vedomost); $i < $rows; $i++) {
-  for ($j = 0, $cols = count($vedomost[$i]); $j < $cols; $j++) {
-  }
-}
 
 include "function222.php";
 
-echo zarplata($rows, $cols, $vedomost);
+echo zarplata($vedomost);
+?>
+</body>
+</html>
+
