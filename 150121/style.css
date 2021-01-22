@@ -1,8 +1,8 @@
 .ss {
-    height: 700px;
+    height: 800px;
     width: 980px;
     margin: 0px auto;
-    background-image: linear-gradient(white, gray), url(anypics.ru-15581.jpg);
+    background-image: linear-gradient(white, violet), url(anypics.ru-15581.jpg);
     background-repeat: no-repeat;
     background-size: cover, contain;
     background-blend-mode: darken;
@@ -10,10 +10,45 @@
 }
 .ww {
     text-align: center;
-   font-size: 30px;
-   color: yellow;
-   font-family: cursive;
-   
+    font-size: 30px;
+    color: yellow;
+    font-family: cursive;
+}
 
+input[type="radio"] {
+    cursor: pointer;
+}
+input[type="submit"] {
+    color: red;
+    cursor: pointer;
+    border-radius: 7px;
+    outline: none;
+}
 
+form {
+    margin: 500px 0px 0px 450px;
+}
+h1 {
+    position: absolute;
+    margin: 100px 0px 0px 175px;
+    color: blueviolet;
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 5px 5px 10px cornflowerblue;
+}
+.qwe {
+    position: absolute;
+    margin: 500px 0px 0px 300px;
+}
+td {
+    height: 200px;
+    width: 400px;
+    background-color: slategray;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+    color: springgreen;
+}
+td:hover {
+    background-color: rgb(97, 119, 56);
 }
