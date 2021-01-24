@@ -9,29 +9,38 @@
 
 <body>
     <?php
-    $data = file("golos.txt");
+    include "config.php";
+    $data = file($fileName);
+ 
+    if (isset($_POST['answer'])) {
+        $currentAnswer = $_POST['answer'];
+        $buff = explode($separate, $data[$currentAnswer + 1]);
+        $buff[1] += 1;
+        $buff[1] .= "\n";
+        $data[$currentAnswer + 1] = $buff[0] . $separate . $buff[1];
+        file_put_contents($fileName, implode("", $data));
+    }
     $question = $data[0];
     unset($data[0]);
- 
+
+
     $answers = [];
     foreach ($data as $value) {
-        $answers[] = explode(' - ', $value)[0];
+        $answers[] = explode($separate, $value);
     }
-
-    print_r($answers);
-
+  print_r($answers);
     ?>
-    <form action="golos.php" method="POST">
-<?=$question ?>
-<br>
-<?php
-foreach ($answers as $key => $value) {
-  echo "<input type='radio' value=$key name='answers'>$value<br\n>";
-}
 
-?>
-<input type="submit" value="OK">
-
+    <form action="?" method="POST">
+        <?= $question ?>
+        <br>
+        <?php
+        foreach ($answers as $key => $value) {
+            $count = $value[1] * 1;
+            echo "<input type='radio' value='$key' name='answer'> $value[0] ($count) <br>\n";
+        }
+        ?>
+        <input type="submit" value="ok">
     </form>
 </body>
 
