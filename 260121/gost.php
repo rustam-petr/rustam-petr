@@ -1,13 +1,5 @@
 <?php
-if (!empty($_POST)) {
-    $row = "\n<----->\n" .
-        $_POST["name"] . "\n" .
-        $_POST["email"] . "\n" .
-        $_POST["text"];
-    file_put_contents("guest.txt", $row, FILE_APPEND);
-    header("Location: ?");
-    die();
-}
+include "gost1.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,12 +12,11 @@ if (!empty($_POST)) {
 
 <body>
     <?php
-    $data = file_get_contents("guest.txt");
+    $data = file_get_contents("dan.txt");
     $records = explode("<----->", $data);
     echo "<table border='1'>";
     foreach ($records as $record) {
         $row = explode("\n", trim($record));
-        // print_r($row);
         echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td></tr>";
     }
     echo "</table>";
