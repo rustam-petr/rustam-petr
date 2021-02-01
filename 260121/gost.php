@@ -16,8 +16,9 @@ include "gost1.php";
     $records = explode("<----->", $data);
     echo "<table border='1'>";
     foreach ($records as $record) {
+        $time=date("H:i:s");
         $row = explode("\n", trim($record));
-        echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td></tr>";
+        echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$time</td></tr>";
     }
     echo "</table>";
     ?>
