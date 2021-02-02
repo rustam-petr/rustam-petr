@@ -30,11 +30,11 @@ include "gost1.php";
     <div class="menu">
     <form action="?" method="POST">
         Введите Ваше имя. <br>
-        <input type="text" name="name"> <br>
+        <input type="text" name="name"> <br><br>
         Введите Ваш адрес электронной почты.<br>
-        <input type="text" name="email"><br>
-        Введите информацию.<br>
-        <textarea rows="20" cols="30" name="text"></textarea><br><br>
+        <input type="text" name="email"><br><br>
+        Введите Ваш отзыв.<br>
+        <textarea rows="20" cols="50" name="text"></textarea><br><br>
         <input type="submit" value="Оставить отзыв">
     </form>
     </div>
