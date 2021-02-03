@@ -1,8 +1,6 @@
 <?php
 $str = $_POST["text"];
-$pat = "/" . $_POST["zam"] . "/i";
-echo $pat;
-$pats = "/" . $_POST["qwe"] . "/i";
-echo $pats;
-$rez=preg_replace($pats, $pat, $str);
+$pat =  $_POST["zam"] ;
+$regexp = "/" . $_POST["qwe"] . "/i";
+$rez=preg_replace($regexp, $pat, $str);
 echo $rez;
