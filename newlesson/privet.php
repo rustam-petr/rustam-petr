@@ -1,7 +1,8 @@
 <?php
-$str = $_POST["name"];
-$pat = "/Привет/i";
-$rez = preg_match_all($pat, $str);
-echo $rez;
+//$str = $_POST["name"];
+//$pat = "/" . $_POST["slo"] . "/i";
+echo "Количество совпадений - " . $rez = preg_match_all("/" . $_POST["slo"] . "/i", $_POST["name"]);
+//echo "Количество совпадений - " . $rez;
 
 
+  
