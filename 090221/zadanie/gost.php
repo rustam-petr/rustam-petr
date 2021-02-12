@@ -10,36 +10,53 @@
 </head>
 
 <body>
-    <div class="form">
-        <?php
-        $str = preg_match_all("/\w[ ]\w/iu", trim($_POST["fio"]));
-        echo $str;
-        $str1 = preg_match("/[\w\d\+_]@[\w\d]{4,}\.[\w]{2,}/iu", trim($_POST["pochta"]));
-        echo $str1;
-        $str2 = preg_match("/(80|\+375)(25|29|33|44)(\d{7})/iu", preg_replace("/[-()]/", "", trim($_POST["telefon"])));
-        echo $str2;
-        $str3 = preg_match("/^(vk)\.(id)\d{8}$/iu", trim($_POST["adress"]));
-        echo $str3;
+<div class="form">
+    <?php
+//    проверка правильности имени и фамилии
+    $condition1 = preg_match(
+        "/^[a-zа-я]+ [a-zа-я]+$/iu",
+        trim($_POST["fio"])
+    );
+ //  проверка правильности почты
+    $condition2 = preg_match(
+        "/[\w\d\+_]+@[\w\d]{4,}\.[\w]{2,}/iu",
+        trim($_POST["pochta"])
+    );
+// проверка правильности телефона
+    $condition3 = preg_match(
+        "/(80|\+375)(25|29|33|44)(\d{7})/iu",
+        preg_replace(
+            "/[^0-9\+]/",
+            "",
+            trim($_POST["telefon"])
+        )
+    );
+// проверка правильности адреса соц сети
+    $condition4 = preg_match(
+        "/^(https:\/\/|)(vk\.com\/)id\d+$/iu",
+        trim($_POST["adress"])
+    );
 
-        $read = preg_replace("/[ \n]{1,}/iu", "", file_get_contents("gost.txt"));
 
-        $pos = strripos($read, preg_replace("/[ ]{1,}/iu", "", $_POST["fio"]));
-        $pos1 = strripos($read, preg_replace("/[ ]{1,}/iu", "", $_POST["pochta"]));
-        $pos2 = strripos($read, preg_replace("/[ ]{1,}/iu", "", $_POST["telefon"]));
-        $pos3 = strripos($read, preg_replace("/[ ]{1,}/iu", "", $_POST["adress"]));
+    $read = preg_replace("/[ \n]{1,}/iu", "", file_get_contents("gost.txt"));
 
-        if ($pos === false && $pos1 === false && $pos2 === false && $pos3 === false) {
-            if ($str == 1 && $str1 == 1 && $str2 == 1 && $str3 == 1) {
-                echo "<h1>Вы успешно прошли регистрацию</h1>";
-                file_put_contents("gost.txt", (trim($_POST["fio"]) . "\n" . trim($_POST["pochta"]) . "\n" . trim($_POST["telefon"]) . "\n" . trim($_POST["adress"]) . "\n"), FILE_APPEND);
-            } else {
-                echo "<h1>Введите правильные данные</h1>";
-            }
+    $pos = strripos($read, preg_replace("/[ ]{1,}/iu", "", $_POST["fio"]));
+    $pos1 = strripos($read, preg_replace("/[ ]{1,}/iu", "", $_POST["pochta"]));
+    $pos2 = strripos($read, preg_replace("/[ -()]{1,}/iu", "", $_POST["telefon"]));
+    $pos3 = strripos($read, preg_replace("/[ ]{1,}/iu", "", $_POST["adress"]));
+
+    if ($pos === false && $pos1 === false && $pos2 === false && $pos3 === false) {
+        if ($condition1 && $condition2 && $condition3 && $condition4) {
+            echo "<h1>Вы успешно прошли регистрацию</h1>";
+            file_put_contents("gost.txt", (trim($_POST["fio"]) . "\n" . trim($_POST["pochta"]) . "\n" . trim($_POST["telefon"]) . "\n" . trim($_POST["adress"]) . "\n"), FILE_APPEND);
         } else {
-            echo "<h1>Вы уже регистрировались</h1>";
-        } ?>
-    </div>
-    <video class="video" src="videobg.mp4" autoplay muted loop></video>
+            echo "<h1>Введите правильные данные</h1>";
+        }
+    } else {
+        echo "<h1>Вы уже регистрировались</h1>";
+    } ?>
+</div>
+<video class="video" src="videobg.mp4" autoplay muted loop></video>
 </body>
 
 </html>
