@@ -5,3 +5,4 @@ preg_match_all($regexp, $str, $matches);
 foreach ($matches[0] as $match) {
     echo $match . "<br>";
 }
+file_put_contents("file.txt",$match);
