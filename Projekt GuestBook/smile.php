@@ -15,7 +15,7 @@ function smile ($text) {
     ],$text);
 }
 function qwe($text){
-    return preg_match("/.*дурак|редиска|идиот|козел.*/iu",$text);
+    return preg_match_all("/.*дурак|редиска|идиот|козел.*/iu",$text);
 
 }
 

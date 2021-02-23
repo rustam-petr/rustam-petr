@@ -12,5 +12,4 @@ if (!qwe($_POST["msg"])) {
 
     }
 }
-
 header("Location: main.php");
