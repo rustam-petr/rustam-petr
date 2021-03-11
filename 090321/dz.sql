@@ -30,3 +30,40 @@ ALTER TABLE `auto_class`
 
 ALTER TABLE `auto_class`
     MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+-- 1.  Найти все автомашины, которые начинаются на A и V.
+SELECT *
+FROM `auto_class`
+WHERE `Сar model` LIKE "A%" OR `Сar model` LIKE "V%".
+
+-- 2. Найти все автомашины с пробегом  от 50000 до 200000 т.км, с объемом двигателя от 2 до 3, дизельные и годом выпуска с 2010 по 2015.
+SELECT *
+FROM `auto_class`
+WHERE `Мileage` BETWEEN 50000 and 200000 and `Еngine volume` BETWEEN 2 and 3 and `Fuel type`="diesel" and `Year of issue` BETWEEN 2010 and 2015
+
+-- 3. Найти все автомашины с ценой 10000,15000,25000, бензиновые, белого и черного цвета.
+SELECT *
+FROM `auto_class`
+WHERE `Price` IN (10000,15000,25000) AND `Fuel type`="petrol" AND (`Color`="white" or `Color`="black")
+
+-- 4.  Выбрать все автомашины с пробегом более 100000 т.км., годом выпуска 2012 по 2020 и отсортировать их в порядке убывания по стоимости.
+SELECT *
+FROM `auto_class`
+WHERE `Мileage`>100000 and `Year of issue` BETWEEN 2012 and 2020 ORDER BY `Price` DESC
+
+-- 5.  Вывести марки автомашины, которые выпускались до 2014 года белого и красного цветов.
+SELECT `Сar model`, `Color`, MIN(`Year of issue`)
+FROM `auto_class`
+WHERE `Color`="red" or `Color`="white" GROUP BY `Сar model` HAVING MIN(`Year of issue`)<2014
+
+-- 6. Найти общий пробег автомашин красного и черного цветов с ценой свыше 15000.
+SELECT SUM(`Мileage`) AS "Общий пробег"
+FROM `auto_class`
+WHERE (`Color`="red" OR `Color`="black") AND `Price`>15000
+
+-- 7.  Найти все автомашины, название которых оканчивается на «а», белого и серого цвета, с объемом
+-- от 1,8 до 2,5 и от 3 до 3,5, годом выпуска свыше 2010 и ценой от 5000 до 20000.
+SELECT *
+FROM `auto_class`
+WHERE `Сar model` LIKE "%a" and (`Color`="white" or `Color`="gray") AND (`Еngine volume` BETWEEN 1.8 and
+2.5 OR `Еngine volume` BETWEEN 3 and 3.5) and `Year of issue`>2010 and `Price` BETWEEN 5000 and 20000
