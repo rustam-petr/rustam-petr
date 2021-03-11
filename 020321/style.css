@@ -1,0 +1,60 @@
+body {
+   margin-top: 20px;
+   background-image: url("pngwing.com.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.one{
+   margin-top: 50px;
+}
+
+.but {
+   text-shadow: 1px 1px 1px black;
+   font-weight: bold;
+   font-size: 22px;
+   border: none;
+   color: black;
+   height: 80px;
+   width: 100px;
+   border-radius: 10px;
+   background: -moz-linear-gradient(top,  rgba(4,158,254,1) 0%, rgba(138,221,254,0) 100%);
+   background: -webkit-linear-gradient(top,  rgba(4,158,254,1) 0%,rgba(138,221,254,0) 100%);
+   background: linear-gradient(to bottom,  rgba(4,158,254,1) 0%,rgba(138,221,254,0) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#049efe', endColorstr='#008addfe',GradientType=0 );
+}
+
+.rav {
+   text-shadow: 1px 1px 1px black;
+   outline: none;
+   border-radius: 10px;
+   font-weight: bold;
+   font-size: 22px;
+   border: none;
+   color: aliceblue;
+
+   height: 50px;
+   width: 100px;
+   background: -moz-linear-gradient(top,  rgba(4,158,254,1) 0%, rgba(138,221,254,0) 100%);
+   background: -webkit-linear-gradient(top,  rgba(4,158,254,1) 0%,rgba(138,221,254,0) 100%);
+   background: linear-gradient(to bottom,  rgba(4,158,254,1) 0%,rgba(138,221,254,0) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#049efe', endColorstr='#008addfe',GradientType=0 );
+
+}
+
+.txt {
+   text-shadow: 1px 1px 1px black;
+   width: 300px;
+   height: 50px;
+   border-radius: 10px;
+   font-weight: bold;
+   font-size: 22px;
+   border: none;
+   color: black;
+   background: -moz-linear-gradient(top,  rgba(4,158,254,1) 0%, rgba(138,221,254,0) 100%);
+   background: -webkit-linear-gradient(top,  rgba(4,158,254,1) 0%,rgba(138,221,254,0) 100%);
+   background: linear-gradient(to bottom,  rgba(4,158,254,1) 0%,rgba(138,221,254,0) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#049efe', endColorstr='#008addfe',GradientType=0 );
+
+}
+
