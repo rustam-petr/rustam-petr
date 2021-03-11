@@ -1,0 +1,60 @@
+body {
+    margin-top: 30px;
+}
+.logo {
+    transition: 1s all;
+}
+.logo:hover {
+    transform: rotateZ(-20deg);
+}
+.head__size {
+    font-size: 20px;
+    font-weight: bold;
+}
+.head__color {
+    color: grey;
+    font-weight: bold;
+}
+.fw-bolder__head {
+    font-size: 40px;
+    font-weight: 700;
+}
+.fw-bolder__dot {
+    color: rgb(13, 160, 13);
+    font-size: 20px;
+}
+.line__botton {
+    background-color: grey;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.line {
+    border-left: 2px solid rgb(197, 188, 188);
+}
+.list-group-item-color {
+    background-color: rgb(87, 80, 80);
+    color: white;
+    border-right: 7px solid rgb(13, 160, 13);
+}
+.footer {
+    padding-top: 15px;
+    margin-top: 100px;
+    height: 80px;
+    background-color: rgb(105, 97, 97);
+}
+.none {
+    text-decoration: none;
+    color: rgb(105, 97, 97);
+}
+.card-title {
+    color: rgb(13, 160, 13);
+}
+.none:hover {
+    color: rgb(13, 160, 13);
+    text-decoration: underline;
+}
+.btn-success:hover {
+    color: rgb(13, 160, 13);
+    text-decoration: underline;
+}
