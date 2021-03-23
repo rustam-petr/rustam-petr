@@ -1,0 +1,229 @@
+/*===Desktop First===*/
+
+@media only screen and (max-width: 1199px) {
+    .benefits__images {
+        width: 40%;
+    }
+    .top__links {
+        padding-right: 0px;
+    }
+    .top__slider-text {
+        padding-right: 80px;
+    }
+    .reviews__item {
+        padding: 25px 15px;
+        min-height: 150px;
+    }
+    .reviews__item-name {
+        font-size: 16px;
+    }
+    .reviews__item-text {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 1140px) {
+    .registr__inner {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .registr__content {
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .menu__list-link {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .top__heading {
+        display: block;
+    }
+
+    .top__content {
+        width: 100%;
+        padding-top: 30px;
+    }
+    .top__slider {
+        width: 100%;
+    }
+    .top__slider-text {
+        padding-right: 80px;
+    }
+    .top__bottom {
+        display: block;
+    }
+    .top__links {
+        padding-right: 0px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .top-items {
+        width: 100%;
+    }
+    .benefits__content {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .benefits__items {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .benefits__text + .benefits__text {
+        width: 100%;
+    }
+    #one {
+        display: none;
+    }
+    .footer .menu {
+        display: none;
+    }
+    .footer__top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .phone {
+        margin-top: 30px;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        margin-top: 15px;
+    }
+    .registr__title {
+        font-size: 25px;
+    }
+    #two {
+        display: none;
+    }
+    .feedback__images {
+        display: none;
+    }
+    .footer,
+    .feedback,
+    .registr,
+    .benefits,
+    .reviews {
+        padding: 50px 0;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .top__content {
+        padding-top: 15px;
+    }
+
+    .top__items {
+        flex-wrap: wrap;
+    }
+    .top__item {
+        margin: 20px;
+    }
+    .top__slider-text {
+        padding-right: 0;
+    }
+    .top__slider-text {
+        padding-right: 120px;
+    }
+    .benefits__images {
+        width: 70%;
+    }
+    .benefits__list {
+        width: 100%;
+    }
+    .benefits__list-item {
+        margin-right: 0;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 26px;
+    }
+    .benefits__list-item::after {
+        right: auto;
+        left: 0;
+    }
+    .benefits__list-item:nth-child(4) {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 452px) {
+    .registr__title {
+        font-size: 20px;
+    }
+    #three {
+        display: none;
+    }
+    .reviews__slider {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer__text {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .header .phone {
+        font-size: 12px;
+    }
+    .top__title {
+        font-size: 28px;
+    }
+    .top__content {
+        padding-top: 10px;
+    }
+    .top__item {
+        width: 100%;
+    }
+    .top-items {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top__links {
+        text-align: center;
+    }
+    .top__link {
+        margin: 10px 15px;
+        display: inline-block;
+    }
+    .top__link + .top__link {
+        margin-left: 0;
+    }
+    .top__slider-text {
+        padding-right: 70px;
+    }
+    .registr__title {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .logo__link {
+        width: 60%;
+    }
+    .reviews {
+        display: none;
+    }
+    .benefits {
+        box-shadow: none;
+    }
+    .feedback__title {
+        font-size: 20px;
+    }
+    .feedback__text {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 366px) {
+    .registr__title {
+        font-size: 16px;
+    }
+}
