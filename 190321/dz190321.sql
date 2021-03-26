@@ -130,6 +130,14 @@ GROUP BY
 HAVING
         COUNT(`customers`.`CNUM`) > 2
 
+SELECT
+    `CITY`,COUNT(*)
+FROM
+    `customers`
+GROUP BY
+    `CITY`
+HAVING COUNT(*)>=2
+
 -- 4.	Найти города, сумма заказов из которых больше, чем средняя сумма заказов за 10/03/1990.
 SELECT
     `customers`.`CITY`
