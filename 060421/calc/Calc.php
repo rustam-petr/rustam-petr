@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Class Calc класс Калькулятор
  */
@@ -19,7 +20,7 @@ class Calc
      * @param $a
      * @param $b
      */
-    public function __construct($a, $b)
+    public function __construct($a,$b)
     {
         $this->a = $a;
         $this->b = $b;
@@ -60,7 +61,7 @@ class Calc
         return $this->a / $this->b;
 
     }
-}
 
+ }
 
 
