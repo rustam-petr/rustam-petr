@@ -19,7 +19,7 @@
             <p class="h2"> Результат выполнения.</p>
             <br>
             <p class="h2"> <?php
-                include_once "function.php";
+                include_once "Operation.php";
 
                 $result = new Operation($_POST["a"]);
 
