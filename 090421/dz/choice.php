@@ -12,105 +12,15 @@
 <body>
 <?php
 switch ($_POST["ch"]) {
-    case "cube":?>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-
-        </div>
-        <div class="col-sm">
-            <form action="result.php" method="post">
-                <div class="mb-3">
-                    <h3> Введите значение стороны куба. </h3>
-                    <label for="formGroupExampleInput" class="form-label"></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите число"
-                           name="a">
-                    <input type="hidden" name="form" value="1">
-                    <br>
-                </div>
-                <select class="form-select" aria-label="Default select example" name="op">
-                    <option selected>Выберите операцию</option>
-                    <option value="square">площадь</option>
-                    <option value="per">периметр</option>
-
-                </select>
-                <br><br>
-                <input type="submit"  class="btn btn-info" value="Вычислить">
-
-            </form>
-        </div>
-        <div class="col-sm">
-
-        </div>
-    </div>
-</div>
-       <?php break;
-    case "trap":?>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-
-        </div>
-        <div class="col-sm">
-            <form action="result.php" method="post">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label"></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите нижнее основание"
-                           name="a"> <br>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите верхнее основание"
-                           name="b">
-                    <input type="hidden" name="form" value="2">
-                    <br>
-                </div>
-                <select class="form-select" aria-label="Default select example" name="op">
-                    <option selected>Выберите операцию</option>
-                    <option value="square">площадь</option>
-                    <option value="per">периметр</option>
-
-                </select>
-                <br><br>
-                <input type="submit"  class="btn btn-info" value="Вычислить">
-
-            </form>
-        </div>
-        <div class="col-sm">
-
-        </div>
-    </div>
-</div>
-        <?php break;
-    case "okr":?>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-
-        </div>
-        <div class="col-sm">
-            <form action="result.php" method="post">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label"></label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите радиус"
-                           name="a"> <br>
-                    <input type="hidden" name="form" value="3">
-                    <br>
-                </div>
-                <select class="form-select" aria-label="Default select example" name="op">
-                    <option selected>Выберите операцию</option>
-                    <option value="square">площадь</option>
-                    <option value="per">периметр</option>
-
-                </select>
-                <br><br>
-                <input type="submit"  class="btn btn-info" value="Вычислить">
-
-            </form>
-        </div>
-        <div class="col-sm">
-
-        </div>
-    </div>
-</div>
-      <?php  break;
+    case "cube":
+        include "template/cube.html";
+        break;
+    case "trap":
+        include "template/trap.html";
+        break;
+    case "okr":
+        include "template/okr.html";
+        break;
 } ?>
 </body>
 </html>

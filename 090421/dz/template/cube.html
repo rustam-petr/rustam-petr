@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+            <form action="result.php?form=cube" method="post">
+                <div class="mb-3">
+                    <h3> Введите значение стороны куба. </h3>
+                    <label for="formGroupExampleInput" class="form-label"></label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите число"
+                           name="a">
+<!--                    <input type="hidden" name="form" value="cube">-->
+                    <br>
+                </div>
+                <select class="form-select" aria-label="Default select example" name="op">
+                    <option selected>Выберите операцию</option>
+                    <option value="square">площадь</option>
+                    <option value="per">периметр</option>
+
+                </select>
+                <br><br>
+                <input type="submit"  class="btn btn-info" value="Вычислить">
+
+            </form>
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>

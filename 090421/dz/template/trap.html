@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+            <form action="result.php?form=trap" method="post">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label"></label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите нижнее основание"
+                           name="a"> <br>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите верхнее основание"
+                           name="b">
+<!--                    <input type="hidden" name="form" value="trap">-->
+                    <br>
+                </div>
+                <select class="form-select" aria-label="Default select example" name="op">
+                    <option selected>Выберите операцию</option>
+                    <option value="square">площадь</option>
+                    <option value="per">периметр</option>
+
+                </select>
+                <br><br>
+                <input type="submit"  class="btn btn-info" value="Вычислить">
+
+            </form>
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>

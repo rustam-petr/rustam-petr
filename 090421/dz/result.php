@@ -1,3 +1,9 @@
+<?php
+include_once "class/Figure.php";
+include_once "class/Cube.php";
+include_once "class/Okr.php";
+include_once "class/Trap.php";
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,21 +25,20 @@
             <p class="h2"> Результат выполнения.</p>
             <br>
             <p class="h2"> <?php
-                include_once "Formula.php";
 
-                switch ($_POST["form"]) {
-                    case "1":
-                        $result = new Formula1 ($_POST["a"]);
+                switch ($_GET["form"]) {
+                    case "cube":
+                        $result = new Cube ($_POST["a"]);
                         echo $result->{$_POST["op"]}();
                         break;
 
-                    case "2":
-                        $result = new Trap1 ($_POST["a"], $_POST["b"]);
+                    case "trap":
+                        $result = new Trap ($_POST["a"], $_POST["b"]);
                         echo $result->{$_POST["op"]}();
                         break;
 
-                    case "3":
-                        $result = new Okr1 ($_POST["a"]);
+                    case "okr":
+                        $result = new Okr ($_POST["a"]);
                         echo $result->{$_POST["op"]}();
                         break;
                 }
