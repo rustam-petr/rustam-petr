@@ -20,24 +20,15 @@
             <br>
             <p class="h2"> <?php
                 include_once "Formula.php";
+                print_r($_FILES["cube"]);
+switch ($_POST["ch"]) {
+    case "cube":
+        $result = new Formula1 ($_POST["a"]);
 
-                switch ($_POST["form"]) {
-                    case "1":
-                        $result = new Formula1 ($_POST["a"]);
-                        echo $result->{$_POST["op"]}();
-                        break;
+        echo $result->{$_POST["op"]}();
+}?></p>
 
-                    case "2":
-                        $result = new Trap1 ($_POST["a"], $_POST["b"]);
-                        echo $result->{$_POST["op"]}();
-                        break;
 
-                    case "3":
-                        $result = new Okr1 ($_POST["a"]);
-                        echo $result->{$_POST["op"]}();
-                        break;
-                }
-                ?></p>
 
         </div>
         <div class="col-sm">
