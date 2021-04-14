@@ -1,5 +1,6 @@
 <?php
 $total = new Price($_POST["width"], $_POST["length"], $_POST["height"],$_POST["priceOne"]);
+
 switch ($_POST["op"]) {
     case "sm":
         $total->setWidthSm($_POST["width"]);

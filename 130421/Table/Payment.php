@@ -93,7 +93,7 @@ abstract class Payment
      */
     public function setHeightInch(float $height): void
     {
-        $this->height = $height;
+        $this->height = $height/3.937;
     }
 
     abstract function tablePrice();
