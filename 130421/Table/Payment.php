@@ -7,7 +7,7 @@ abstract class Payment
     protected float $height;
     protected float $priceOne;
 
-    public function __construct($width, $length, $height,$priceOne)
+    public function __construct($width, $length, $height, $priceOne)
     {
         $this->width = $width;
         $this->length = $length;
@@ -93,7 +93,7 @@ abstract class Payment
      */
     public function setHeightInch(float $height): void
     {
-        $this->height = $height/3.937;
+        $this->height = $height / 3.937;
     }
 
     abstract function tablePrice();
