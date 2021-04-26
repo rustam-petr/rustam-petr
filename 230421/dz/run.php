@@ -1,9 +1,22 @@
 <?php
-include_once "Ol_Array_map.php";
+include_once "autoload_Class.php";
 
-$ol = new Ol_Array_map();
-$ol->setData(["Иванов", "Петров", "Сидоров"]);
-$ol->setType("1");
-echo $ol->html();
-//$ol->setType("A");
-//echo $ol->html();
+$ol = new Ol();
+echo $ol->setData(["Иванов", "Петров", "Сидоров"])
+    ->setType("1")
+    ->html();
+
+$ul = new Ul();
+echo $ul->setData(["Иванов", "Петров", "Сидоров"])
+    ->setType("square")
+    ->html();
+
+$table = new Table();
+echo $table
+    ->setHeaders(['Имя', 'Зарплата', 'Должность'])
+    ->setData([
+        ['Ваня', '500р', 'Сварщик'],
+        ['Петя', '150р', 'Тракторист'],
+        ['Ольга', '700р', 'Бухгалтер']
+    ])
+    ->html();

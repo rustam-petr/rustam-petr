@@ -1,7 +1,7 @@
 <?php
 
 
-abstract class AbstractParent
+abstract class Father_Class
 {
     protected array $data = [];
     protected string $class = "";
@@ -9,9 +9,9 @@ abstract class AbstractParent
 
     /**
      * @param array $data
-     * @return AbstractParent
+     * @return Father_Class
      */
-    public function setData(array $data): static
+    public function setData(array $data)
     {
         $this->data = $data;
         return $this;
@@ -19,13 +19,12 @@ abstract class AbstractParent
 
     /**
      * @param string $class
-     * @return AbstractParent
+     * @return Father_Class
      */
-    public function setClass(string $class): static
+    public function setClass(string $class)
     {
         $this->class = $class;
         return $this;
     }
     abstract public function html(): string;
-
 }

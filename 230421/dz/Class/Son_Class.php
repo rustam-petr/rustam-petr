@@ -1,16 +1,16 @@
 <?php
 
 
-class TList extends AbstractParent
+class Son_Class extends Father_Class
 {
     protected string $type="";
-    protected string $tagName = "";
+    protected string $name = "";
 
     /**
      * @param string $type
-     * @return TList
+     * @return Son_Class
      */
-    public function setType(string $type): static
+    public function setType(string $type)
     {
         $this->type = $type;
         return $this;
@@ -22,6 +22,6 @@ class TList extends AbstractParent
         array_walk($this->data, function ($value) use (&$html) {
             $html .= "\t<li>$value</li>\n";
         });
-        return "<$this->tagName type='$this->type'>\n$html</$this->tagName>";
+        return "<$this->name type='$this->type'>\n$html</$this->name>";
     }
 }

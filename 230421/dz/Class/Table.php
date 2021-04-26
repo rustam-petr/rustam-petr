@@ -1,6 +1,7 @@
 <?php
 
-class Table extends AbstractParent
+
+class Table extends Father_Class
 {
     protected array $headers = [];
 
@@ -8,7 +9,7 @@ class Table extends AbstractParent
      * @param array $headers
      * @return Table
      */
-    public function setHeaders(array $headers): static
+    public function setHeaders(array $headers)
     {
         $this->headers = $headers;
         return $this;
@@ -19,7 +20,7 @@ class Table extends AbstractParent
      */
     public function html(): string
     {
-        $html = "<table class='$this->class'>";
+        $html = "<table border='1'>";
 
         if (!empty($this->headers)) {
             $html .= "<tr>";
@@ -27,7 +28,6 @@ class Table extends AbstractParent
             array_map(function ($cell) use (&$html) {
                 $html .= "<th>$cell</th>";
             }, $this->headers);
-//            array_map(fn($cell) =>"<th>$cell</th>" ,$this->headers);
 
             $html .= "</tr>";
         }
