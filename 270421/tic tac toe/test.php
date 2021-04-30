@@ -3,7 +3,12 @@
 include "autoload.php";
 include "unittest.php";
 
-$tictac=new TicTac();
+$tictac = new TicTac();
+
+$tictac
+    ->init(3)
+    ->putCross(1, 1)
+    ->getMap();
 
 //print_r($tictac->init(2)->putCross(1,1)->getMap());
 
@@ -11,6 +16,9 @@ $tictac=new TicTac();
 //
 //test($tictac->init(1)->getMap(),[[""]]);
 
-$maps=new Map();
+$map = new Map();
 
-echo $maps->setMap($tictac->getMap());
+echo $map
+    ->setMap($tictac->getMap())
+    ->getHtmlTable();
+

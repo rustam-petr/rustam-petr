@@ -1,28 +1,40 @@
 <?php
 
 
-class Map extends TicTac
+class Map
 {
-    protected array $qwe;
+    protected array $map = [];
 
-    public function setMap()
+    /**
+     * @param $map
+     * @return $this
+     */
+    public function setMap($map)
     {
-        $this->qwe=$this->getMap();
+        $this->map = $map;
         return $this;
     }
+
     /**
      * @return string
      */
-    public function html(): string
+    public function getHtmlTable(): string
     {
-        $html = "<table border='1'>";
+        $html = "<table class='tictac'>";
 
-           foreach ($this->qwe as $row) {
+        foreach ($this->map as $row) {
 
             $html .= "<tr>";
             foreach ($row as $cell) {
+                if ($cell == "x") {
+                    $html .= "<td>❌</td>";
 
-                $html .= "<td>$cell</td>";
+                } elseif ($cell == "0") {
+                    $html .= "<td>😀</td>";
+                } else {
+                    $html .= "<td></td>";
+                }
+
             }
             $html .= "</tr>";
         }

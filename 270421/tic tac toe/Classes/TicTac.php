@@ -5,6 +5,10 @@ class TicTac
 {
     protected array $map;
 
+    public function __construct()
+    {
+    }
+
     /**
      * @return array
      */
@@ -28,8 +32,8 @@ class TicTac
 
     public function putCross(int $i, int $j)
     {
-        if (isset($this->map[$i])&& isset($this->map[$i][$j]) && $this->map[$i][$j] == ""){
-            $this->map[$i][$j]="x";
+        if (isset($this->map[$i]) && isset($this->map[$i][$j]) && $this->map[$i][$j] == "") {
+            $this->map[$i][$j] = "x";
 
         }
 
@@ -39,8 +43,8 @@ class TicTac
 
     public function putZero(int $i, int $j)
     {
-        if (isset($this->map[$i])&& isset($this->map[$i][$j]) && $this->map[$i][$j] == ""){
-            $this->map[$i][$j]="0";
+        if (isset($this->map[$i]) && isset($this->map[$i][$j]) && $this->map[$i][$j] == "") {
+            $this->map[$i][$j] = "0";
 
         }
 
