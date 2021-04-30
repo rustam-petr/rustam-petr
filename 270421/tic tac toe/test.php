@@ -13,4 +13,4 @@ $tictac=new TicTac();
 
 $maps=new Map();
 
-echo $maps->setMap();
+echo $maps->setMap($tictac->getMap());
