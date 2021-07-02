@@ -1,1 +1,5 @@
-ArrayArrayArrayArrayArrayArrayArray
+0;Name:Иванов;ZP:150
+1;Name:Петров;ZP:723
+3;Name:Сидоров;ZP:578
+4;Name:Kolya;ZP:11100
+5;Name:Anton;ZP:900

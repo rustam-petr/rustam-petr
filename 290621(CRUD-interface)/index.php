@@ -18,15 +18,24 @@ include "vendor/autoload.php";
 //$json->update(2,["Name" => "Vasya", "Salary" => 77777]);
 
 //$db = new DB(new JsonTable("table3.json"));
-//$db->insert(["Name" => "Rustam", "Salary" => 1000]);
-
-$db = new DB(new PhpTable("table.php"));
+////$db->insert(["Name" => "Rustam", "Salary" => 1000]);
+//
+//$db = new DB(new PhpTable("table.php"));
+////print_r($db->select());
+////$db->insert(["Name" => "Rustam", "Salary" => 1000]);
+////$db->insert(["Name" => "Ivan", "Salary" => 70007]);
+////$db->update(1,["Name" => "Ivan", "Salary" => 555]);
+////$db->delete(4);
+//
+//$db = new DB(new TxtTable("table.txt"));
 //print_r($db->select());
-//$db->insert(["Name" => "Rustam", "Salary" => 1000]);
-//$db->insert(["Name" => "Ivan", "Salary" => 70007]);
-//$db->update(1,["Name" => "Ivan", "Salary" => 555]);
-//$db->delete(4);
-
-$db = new DB(new TxtTable("table.txt"));
+//$db->insert(["1","Name:Ivan","ZP:70007"]);
+$jsonDriver = new JsonTable('table.json');
+$txtDriver = new TxtTable('table.txt');
+$db = new DB($txtDriver);
+//$db->insert([0 => ['Name' => 'Иванов', 'ZP' => 150]]);
 print_r($db->select());
-$db->insert(["1","Name:Ivan","ZP:70007"]);
+
+
+$db->insert(["Name" => "Kolya", "ZP" => 11100]);
+$db->insert(["Name" => "Anton", "ZP" => 900]);
