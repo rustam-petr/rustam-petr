@@ -1,0 +1,1 @@
+{"version":1,"defects":{"SquareTest::testSquareRectangle":3},"times":{"SquareTest::testSquareRectangle":0.01,"SquareTest::testSquare":0.001,"SquareTest::testSquareTriangle":0.001}}
