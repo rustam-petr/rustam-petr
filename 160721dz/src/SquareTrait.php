@@ -4,7 +4,7 @@
 namespace App;
 
 
-trait SquareTrate
+trait SquareTrait
 {
     public function square(): float
     {

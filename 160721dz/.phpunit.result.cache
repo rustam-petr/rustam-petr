@@ -1,1 +1,1 @@
-{"version":1,"defects":{"FigureTest::testSquare":4,"FigureTest::testPer":3},"times":{"FigureTest::testSquare":0.017,"FigureTest::testPer":0}}
+{"version":1,"defects":{"FigureTest::testSquare":3,"FigureTest::testPer":3},"times":{"FigureTest::testSquare":0.032,"FigureTest::testPer":0}}

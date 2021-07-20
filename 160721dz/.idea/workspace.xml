@@ -7,7 +7,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -101,7 +101,7 @@
       <recent name="C:\OpenServer\domains\Rustam\rustam-petr\160721dz\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Composer Script.phpstan">
+  <component name="RunManager" selected="Composer Script.test">
     <configuration name="phpstan" type="ComposerRunConfigurationType" factoryName="Composer Script" temporary="true">
       <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
       <option name="script" value="phpstan" />
@@ -132,9 +132,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Composer Script.phpstan" />
         <item itemvalue="Composer Script.test" />
         <item itemvalue="Composer Script.psalm" />
+        <item itemvalue="Composer Script.phpstan" />
         <item itemvalue="PHPUnit.FigureTest.testSquare" />
       </list>
     </recent_temporary>
@@ -147,7 +147,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626711950135</updated>
-      <workItem from="1626711951737" duration="6017000" />
+      <workItem from="1626711951737" duration="6204000" />
+      <workItem from="1626795164365" duration="2734000" />
     </task>
     <servers />
   </component>

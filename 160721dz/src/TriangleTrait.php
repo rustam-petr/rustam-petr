@@ -4,7 +4,7 @@
 namespace App;
 
 
-trait TriangleTrate
+trait TriangleTrait
 {
     public function square(): float
     {
